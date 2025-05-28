@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Register Page</title>
+        <link rel="stylesheet" href="">
+        
+        <style>
+            form {
+                background-image: url('{% static 'design/img/tra.jpg' %}');
+                width: 400px;
+                margin: 20px auto;
+                padding: 20px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                
+            }
+
+            label {
+                display: block;
+                font-size: 16px;
+                font-weight: bold;
+                color: #333;
+                margin-bottom: 5px;
+
+            }
+            input[type="text"],
+            input[type="password"]{
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 10px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+            input[type="text"]:focus,
+            input[type="password"]:focus{
+                outline: none
+                box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+                border-color: #66afe9;
+            }
+
+            button[type="submit"]{
+                background-color: #007bff;
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+
+            }
+
+            button[type="submit"]:hover {
+                background-color: blue;
+            }
+
+            ul {
+                list-style-type: none;
+                padding: 0;
+                margin-top: 5px;
+                color: #777;
+
+            }
+            li {
+                font-size: 14px;
+                margin-bottom: 3px;
+            }
+        
+
+
+        </style>
+    
+    </head>
+    <body>
+        
+        <form method="post">
+            <h2>Your Journey Begins Here. Sign Up and Start Traveling!</h2>
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Register</button>
+            <p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
+        </form>
+        
+            
+    </body>
+</html>

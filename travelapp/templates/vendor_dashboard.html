@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vendor Dashboard</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body>
+        <div class="max-w-4xl mx-auto bg-white p-6 rounded shadow">
+            <h1 class="text-3xl font-bold mb-6">Add New Package</h1>
+            <a href="{% url 'v_signup' %}" class="btn btn-success rounded-pill py-2 px-4">Vendor Signup</a>
+            <form method="POST" class="space-y-4 bg-gray-50 p-6 rounded">
+              {% csrf_token %}
+              {{ form.as_p }}
+              <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+                Add Package
+              </button>
+            </form>
+            <h2 class="mt-10 text-2xl font-semibold">Your Packages</h2>
+                <table class="w-full mt-4 border-collapse border border-gray-300">
+                  <thead>
+                    <tr>
+                      <th class="border border-gray-300 px-3 py-1">Title</th>
+                      <th class="border border-gray-300 px-3 py-1">Description</th>
+                      <th class="border border-gray-300 px-3 py-1">Price</th>
+                      <th class="border border-gray-300 px-3 py-1">Location</th>
+                      <th class="border border-gray-300 px-3 py-1">Created At</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for pkg in packages %}
+                    <tr>
+                      <td class="border border-gray-300 px-3 py-1">{{ pkg.title }}</td>
+                      <td class="border border-gray-300 px-3 py-1">{{ pkg.description|truncatechars:40 }}</td>
+                      <td class="border border-gray-300 px-3 py-1">${{ pkg.price }}</td>
+                      <td class="border border-gray-300 px-3 py-1">{{ pkg.location }}</td>
+                      <td class="border border-gray-300 px-3 py-1">{{ pkg.created_at|date:"Y-m-d" }}</td>
+                    </tr>
+                    {% empty %}
+                      <tr>
+                        <td colspan="5" class="text-center py-4">No packages yet.</td>
+                      </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+                <h2 class="text-xl font-bold my-4">Your Packages</h2>
+              
+              
+        </div>
+    </body>
+</html>  

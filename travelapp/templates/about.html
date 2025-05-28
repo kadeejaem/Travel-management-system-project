@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+
+    {% block content %}
+        <div class="container-fluid py-5 mb-5 hero-header" style="background: url('{% static 'design/img/tra.jpg' %}') center center/cover no-repeat; min-height:500px ;" ></div>
+            <div class="container py-5">
+                <div class="row justify-content-center py-5">
+                    <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
+                        <h1 class="display-3 text-dark animated slideInDown text-center">About Us</h1>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb justify-content-center">
+                                <li class="breadcrumb-item text-success"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item text-success"><a href="#">Pages</a></li>
+                                <li class="breadcrumb-item text-dark active" aria-current="page">About</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+
+
+
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="row g-5">
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+                        <div class="position-relative h-100">
+                            <img class="img-fluid position-absolute w-100 h-100" src="{% static 'design/img/tourist.jpg' %}" alt="" style="object-fit: cover;">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <h6 class="section-title bg-white text-start text-success pe-3">About Us</h6>
+                        <h1 class="mb-4">Welcome to <span class="text-success">BeyondBoundaries</span></h1>
+                        <p class="mb-4">At BeyondBoundaries.co, we believe that travel is more than just visiting new places — it's about experiencing the world, discovering new cultures, and creating memories that last a lifetime. Whether you're seeking adventure in the mountains, relaxation on tropical beaches, or cultural immersion in historic cities, we're here to make your journey unforgettable.</p>
+                        <p class="mb-4">With a passion for exploration and a commitment to personalized service, we offer curated travel packages, expert guidance, and seamless planning to help you explore the world your way. From solo travelers to family vacations and group tours, we tailor every detail to fit your style and budget.</p>
+                        <div class="row gy-2 gx-4 mb-4">
+                            <div class="col-sm-6">
+                                <p class="mb-0"><i class="fa fa-arrow-right text-success me-2"></i>First Class Flights</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p class="mb-0"><i class="fa fa-arrow-right text-success me-2"></i>Handpicked Hotels</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p class="mb-0"><i class="fa fa-arrow-right text-success me-2"></i>5 Star Accommodations</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p class="mb-0"><i class="fa fa-arrow-right text-success me-2"></i>Latest Model Vehicles</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p class="mb-0"><i class="fa fa-arrow-right text-success me-2"></i>150 Premium City Tours</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p class="mb-0"><i class="fa fa-arrow-right text-success me-2"></i>24/7 Service</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endblock %}    
+    

@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+{% load static %}
+
+    {% block content %}
+        <div class="container-fluid py-5 mb-5 hero-header" style="background: url('{% static 'design/img/tra.jpg' %}') center center/cover no-repeat; min-height:500px ;" ></div>
+            <div class="container py-5">
+                <div class="row justify-content-center py-5">
+                    <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
+                        <h1 class="display-3 text-dark animated slideInDown">Services</h1>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb justify-content-center">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                                <li class="breadcrumb-item text-dark active" aria-current="page">Services</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h6 class="section-title bg-dark text-center text-success px-3">Services</h6>
+                    <h1 class="mb-5">Our Services</h1>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="service-item rounded pt-3">
+                            <div class="p-4">
+                                <i class="fa fa-3x fa-globe text-success mb-4"></i>
+                                <h5>WorldWide Tours</h5>
+                                <p>Wherever you dream of going, we’ll take you there — effortlessly and in style</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="service-item rounded pt-3">
+                            <div class="p-4">
+                                <i class="fa fa-3x fa-hotel text-success mb-4"></i>
+                                <h5>Hotel Reservation</h5>
+                                <p>We make hotel booking seamless and stress-free, offering access to top-rated hotels worldwide with exclusive deals.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-item rounded pt-3">
+                            <div class="p-4">
+                                <i class="fa fa-3x fa-user text-success mb-4"></i>
+                                <h5>Travel Guides</h5>
+                                <p>Discover more with our professional travel guides who offer in-depth knowledge and a personal touch to every journey.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                        <div class="service-item rounded pt-3">
+                            <div class="p-4">
+                                <i class="fa fa-3x fa-cog text-success mb-4"></i>
+                                <h5>Event Management</h5>
+                                <p>We specialize in planning and executing seamless events around the world </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>            
+
+
+
+        <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="text-center">
+                    <h6 class="section-title bg-white text-center text-success px-3">Testimonial</h6>
+                    <h1 class="mb-5">Our Clients Say!!!</h1>
+                </div>
+                <div class="owl-carousel testimonial-carousel position-relative">
+                    <div class="testimonial-item bg-white text-center border p-4"> 
+                        <h5 class="mb-0">David</h5>
+                        <p>Kerala</p>
+                        <p class="mb-0">"Traveling to the Maldives was an absolute dream come true! From the moment we arrived, everything was perfect — the crystal-clear waters, stunning sunsets, and warm hospitality made it unforgettable.</p>
+                    </div>
+                    <div class="testimonial-item bg-white text-center border p-4">
+                        <h5 class="mb-0">Anjali</h5>
+                        <p>Tamilnadu</p>
+                        <p class="mt-2 mb-0">My trip to Kerala was nothing short of amazing. The peaceful backwaters, lush green landscapes, and delicious local cuisine made every day special. </p>
+                    </div>
+                    <div class="testimonial-item bg-white text-center border p-4">
+                        <h5 class="mb-0">Anna</h5>
+                        <p>Delhi</p>
+                        <p class="mt-2 mb-0">Visiting Malaysia was an incredible adventure! The mix of vibrant city life in Kuala Lumpur and the tranquil beaches of Langkawi gave me the perfect balance. ></p>
+                    </div>
+                    <div class="testimonial-item bg-white text-center border p-4">
+                        <h5 class="mb-0">Adam</h5>
+                        <p>Kerala</p>
+                        <p class="mt-2 mb-0">"I had the most amazing time exploring Bali! The stunning beaches, lush rice terraces, and vibrant culture made it a trip to remember.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+ 
+    {% endblock %}
+        
+
+    
